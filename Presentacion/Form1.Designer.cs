@@ -54,11 +54,13 @@
             this.label16 = new System.Windows.Forms.Label();
             this.chkFuncion = new System.Windows.Forms.CheckBox();
             this.btnBuscarP = new System.Windows.Forms.Button();
+            this.dgvBuscarFuncion = new System.Windows.Forms.DataGridView();
             this.tbcPeliculas.SuspendLayout();
             this.tbcRegistrar.SuspendLayout();
             this.tbcListar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvListar)).BeginInit();
             this.tbcVender.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvBuscarFuncion)).BeginInit();
             this.SuspendLayout();
             // 
             // tbcPeliculas
@@ -261,6 +263,7 @@
             // 
             // tbcVender
             // 
+            this.tbcVender.Controls.Add(this.dgvBuscarFuncion);
             this.tbcVender.Controls.Add(this.txtCodA);
             this.tbcVender.Controls.Add(this.btnBuscar);
             this.tbcVender.Controls.Add(this.label12);
@@ -331,6 +334,16 @@
             this.btnBuscarP.Text = "Buscar Pelicula";
             this.btnBuscarP.UseVisualStyleBackColor = true;
             // 
+            // dgvBuscarFuncion
+            // 
+            this.dgvBuscarFuncion.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvBuscarFuncion.Location = new System.Drawing.Point(18, 78);
+            this.dgvBuscarFuncion.Name = "dgvBuscarFuncion";
+            this.dgvBuscarFuncion.RowHeadersWidth = 51;
+            this.dgvBuscarFuncion.RowTemplate.Height = 24;
+            this.dgvBuscarFuncion.Size = new System.Drawing.Size(708, 150);
+            this.dgvBuscarFuncion.TabIndex = 29;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -346,6 +359,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvListar)).EndInit();
             this.tbcVender.ResumeLayout(false);
             this.tbcVender.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvBuscarFuncion)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -378,6 +392,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.CheckBox chkFuncion;
         private System.Windows.Forms.Button btnBuscarP;
+        private System.Windows.Forms.DataGridView dgvBuscarFuncion;
     }
 }
 
