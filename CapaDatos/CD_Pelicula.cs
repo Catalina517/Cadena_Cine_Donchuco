@@ -31,5 +31,27 @@ namespace CapaDatos
                 cmd.ExecuteNonQuery();
             }
         }
-    }
+
+        public DataRow BuscarPelicula(int codigo)
+        {
+            DataTable dt = new DataTable();
+            using (SqlConnection cn = new SqlConnection(cadena))
+            {
+                SqlCommand comando = new SqlCommand("sp_BuscarPelicula", cn);
+                comando.CommandType = CommandType.StoredProcedure;
+                comando.Parameters.AddWithValue("@Codigo", codigo);
+
+                SqlDataAdapter da = new SqlDataAdapter(comando);
+                da.Fill(dt);
+            }
+
+            if (dt.Rows.Count > 0)
+            {
+                return dt.Rows[0];
+            }
+            else
+            {
+                return null;
+            }
+        }
 }
