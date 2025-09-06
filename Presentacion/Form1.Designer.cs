@@ -30,6 +30,10 @@
         {
             this.tbcPeliculas = new System.Windows.Forms.TabControl();
             this.tbcRegistrar = new System.Windows.Forms.TabPage();
+            this.txtSala = new System.Windows.Forms.TextBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.dtmFechaHora = new System.Windows.Forms.DateTimePicker();
+            this.label7 = new System.Windows.Forms.Label();
             this.btnBuscarP = new System.Windows.Forms.Button();
             this.chkFuncion = new System.Windows.Forms.CheckBox();
             this.txtGenero = new System.Windows.Forms.TextBox();
@@ -48,15 +52,6 @@
             this.btnListar = new System.Windows.Forms.Button();
             this.dgvListar = new System.Windows.Forms.DataGridView();
             this.tbcVender = new System.Windows.Forms.TabPage();
-            this.dgvBuscarFuncion = new System.Windows.Forms.DataGridView();
-            this.txtCodA = new System.Windows.Forms.TextBox();
-            this.btnBuscar = new System.Windows.Forms.Button();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
-            this.txtSala = new System.Windows.Forms.TextBox();
-            this.label11 = new System.Windows.Forms.Label();
-            this.dtmFechaHora = new System.Windows.Forms.DateTimePicker();
-            this.label7 = new System.Windows.Forms.Label();
             this.btnVender = new System.Windows.Forms.Button();
             this.txtTotal = new System.Windows.Forms.TextBox();
             this.txtCant = new System.Windows.Forms.TextBox();
@@ -64,6 +59,11 @@
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
+            this.dgvBuscarFuncion = new System.Windows.Forms.DataGridView();
+            this.txtCodA = new System.Windows.Forms.TextBox();
+            this.btnBuscar = new System.Windows.Forms.Button();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
             this.tbcPeliculas.SuspendLayout();
             this.tbcRegistrar.SuspendLayout();
             this.tbcListar.SuspendLayout();
@@ -111,6 +111,42 @@
             this.tbcRegistrar.Text = "Registrar";
             this.tbcRegistrar.UseVisualStyleBackColor = true;
             this.tbcRegistrar.Click += new System.EventHandler(this.tbcRegistrar_Click);
+            // 
+            // txtSala
+            // 
+            this.txtSala.Location = new System.Drawing.Point(478, 216);
+            this.txtSala.Name = "txtSala";
+            this.txtSala.Size = new System.Drawing.Size(176, 22);
+            this.txtSala.TabIndex = 28;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("MingLiU_HKSCS-ExtB", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(377, 216);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(53, 17);
+            this.label11.TabIndex = 27;
+            this.label11.Text = "Sala:";
+            // 
+            // dtmFechaHora
+            // 
+            this.dtmFechaHora.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtmFechaHora.Location = new System.Drawing.Point(517, 164);
+            this.dtmFechaHora.Name = "dtmFechaHora";
+            this.dtmFechaHora.ShowUpDown = true;
+            this.dtmFechaHora.Size = new System.Drawing.Size(200, 22);
+            this.dtmFechaHora.TabIndex = 26;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("MingLiU_HKSCS-ExtB", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(377, 164);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(134, 17);
+            this.label7.TabIndex = 25;
+            this.label7.Text = "Fecha / Hora :";
             // 
             // btnBuscarP
             // 
@@ -296,90 +332,6 @@
             this.tbcVender.Text = "Vender";
             this.tbcVender.UseVisualStyleBackColor = true;
             // 
-            // dgvBuscarFuncion
-            // 
-            this.dgvBuscarFuncion.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvBuscarFuncion.Location = new System.Drawing.Point(18, 78);
-            this.dgvBuscarFuncion.Name = "dgvBuscarFuncion";
-            this.dgvBuscarFuncion.RowHeadersWidth = 51;
-            this.dgvBuscarFuncion.RowTemplate.Height = 24;
-            this.dgvBuscarFuncion.Size = new System.Drawing.Size(708, 150);
-            this.dgvBuscarFuncion.TabIndex = 29;
-            // 
-            // txtCodA
-            // 
-            this.txtCodA.Location = new System.Drawing.Point(126, 50);
-            this.txtCodA.Name = "txtCodA";
-            this.txtCodA.Size = new System.Drawing.Size(176, 22);
-            this.txtCodA.TabIndex = 28;
-            // 
-            // btnBuscar
-            // 
-            this.btnBuscar.Font = new System.Drawing.Font("MingLiU_HKSCS-ExtB", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBuscar.Location = new System.Drawing.Point(392, 17);
-            this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(147, 48);
-            this.btnBuscar.TabIndex = 26;
-            this.btnBuscar.Text = "Buscar Pelicula";
-            this.btnBuscar.UseVisualStyleBackColor = true;
-            // 
-            // label12
-            // 
-            this.label12.BackColor = System.Drawing.Color.Transparent;
-            this.label12.Font = new System.Drawing.Font("MingLiU_HKSCS-ExtB", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label12.Location = new System.Drawing.Point(14, 17);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(288, 30);
-            this.label12.TabIndex = 22;
-            this.label12.Text = "Buscar Función";
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.Font = new System.Drawing.Font("MingLiU_HKSCS-ExtB", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.Location = new System.Drawing.Point(25, 55);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(80, 17);
-            this.label16.TabIndex = 18;
-            this.label16.Text = "Código :";
-            // 
-            // txtSala
-            // 
-            this.txtSala.Location = new System.Drawing.Point(478, 216);
-            this.txtSala.Name = "txtSala";
-            this.txtSala.Size = new System.Drawing.Size(176, 22);
-            this.txtSala.TabIndex = 28;
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("MingLiU_HKSCS-ExtB", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(377, 216);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(53, 17);
-            this.label11.TabIndex = 27;
-            this.label11.Text = "Sala:";
-            // 
-            // dtmFechaHora
-            // 
-            this.dtmFechaHora.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtmFechaHora.Location = new System.Drawing.Point(517, 164);
-            this.dtmFechaHora.Name = "dtmFechaHora";
-            this.dtmFechaHora.ShowUpDown = true;
-            this.dtmFechaHora.Size = new System.Drawing.Size(200, 22);
-            this.dtmFechaHora.TabIndex = 26;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("MingLiU_HKSCS-ExtB", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(377, 164);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(134, 17);
-            this.label7.TabIndex = 25;
-            this.label7.Text = "Fecha / Hora :";
-            // 
             // btnVender
             // 
             this.btnVender.Font = new System.Drawing.Font("MingLiU_HKSCS-ExtB", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -440,6 +392,54 @@
             this.label10.Size = new System.Drawing.Size(170, 17);
             this.label10.TabIndex = 38;
             this.label10.Text = "Número de Función:";
+            // 
+            // dgvBuscarFuncion
+            // 
+            this.dgvBuscarFuncion.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvBuscarFuncion.Location = new System.Drawing.Point(18, 78);
+            this.dgvBuscarFuncion.Name = "dgvBuscarFuncion";
+            this.dgvBuscarFuncion.RowHeadersWidth = 51;
+            this.dgvBuscarFuncion.RowTemplate.Height = 24;
+            this.dgvBuscarFuncion.Size = new System.Drawing.Size(708, 150);
+            this.dgvBuscarFuncion.TabIndex = 29;
+            // 
+            // txtCodA
+            // 
+            this.txtCodA.Location = new System.Drawing.Point(126, 50);
+            this.txtCodA.Name = "txtCodA";
+            this.txtCodA.Size = new System.Drawing.Size(176, 22);
+            this.txtCodA.TabIndex = 28;
+            // 
+            // btnBuscar
+            // 
+            this.btnBuscar.Font = new System.Drawing.Font("MingLiU_HKSCS-ExtB", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBuscar.Location = new System.Drawing.Point(392, 17);
+            this.btnBuscar.Name = "btnBuscar";
+            this.btnBuscar.Size = new System.Drawing.Size(147, 48);
+            this.btnBuscar.TabIndex = 26;
+            this.btnBuscar.Text = "Buscar Función";
+            this.btnBuscar.UseVisualStyleBackColor = true;
+            // 
+            // label12
+            // 
+            this.label12.BackColor = System.Drawing.Color.Transparent;
+            this.label12.Font = new System.Drawing.Font("MingLiU_HKSCS-ExtB", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.label12.Location = new System.Drawing.Point(14, 17);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(288, 30);
+            this.label12.TabIndex = 22;
+            this.label12.Text = "Buscar Función";
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Font = new System.Drawing.Font("MingLiU_HKSCS-ExtB", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.Location = new System.Drawing.Point(25, 55);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(80, 17);
+            this.label16.TabIndex = 18;
+            this.label16.Text = "Código :";
             // 
             // Form1
             // 
