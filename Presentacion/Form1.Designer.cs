@@ -30,14 +30,14 @@
         {
             this.tbcPeliculas = new System.Windows.Forms.TabControl();
             this.tbcRegistrar = new System.Windows.Forms.TabPage();
-            this.dtpFechaF = new System.Windows.Forms.DateTimePicker();
+            this.btnBuscarP = new System.Windows.Forms.Button();
+            this.chkFuncion = new System.Windows.Forms.CheckBox();
             this.txtGenero = new System.Windows.Forms.TextBox();
             this.txtDuracion = new System.Windows.Forms.TextBox();
             this.txtNom = new System.Windows.Forms.TextBox();
             this.txtCod = new System.Windows.Forms.TextBox();
             this.btnRegistrarF = new System.Windows.Forms.Button();
             this.btnRegistar = new System.Windows.Forms.Button();
-            this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -48,13 +48,22 @@
             this.btnListar = new System.Windows.Forms.Button();
             this.dgvListar = new System.Windows.Forms.DataGridView();
             this.tbcVender = new System.Windows.Forms.TabPage();
+            this.dgvBuscarFuncion = new System.Windows.Forms.DataGridView();
             this.txtCodA = new System.Windows.Forms.TextBox();
             this.btnBuscar = new System.Windows.Forms.Button();
             this.label12 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
-            this.chkFuncion = new System.Windows.Forms.CheckBox();
-            this.btnBuscarP = new System.Windows.Forms.Button();
-            this.dgvBuscarFuncion = new System.Windows.Forms.DataGridView();
+            this.txtSala = new System.Windows.Forms.TextBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.dtmFechaHora = new System.Windows.Forms.DateTimePicker();
+            this.label7 = new System.Windows.Forms.Label();
+            this.btnVender = new System.Windows.Forms.Button();
+            this.txtTotal = new System.Windows.Forms.TextBox();
+            this.txtCant = new System.Windows.Forms.TextBox();
+            this.txtNumFuncion = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
             this.tbcPeliculas.SuspendLayout();
             this.tbcRegistrar.SuspendLayout();
             this.tbcListar.SuspendLayout();
@@ -76,16 +85,18 @@
             // 
             // tbcRegistrar
             // 
+            this.tbcRegistrar.Controls.Add(this.txtSala);
+            this.tbcRegistrar.Controls.Add(this.label11);
+            this.tbcRegistrar.Controls.Add(this.dtmFechaHora);
+            this.tbcRegistrar.Controls.Add(this.label7);
             this.tbcRegistrar.Controls.Add(this.btnBuscarP);
             this.tbcRegistrar.Controls.Add(this.chkFuncion);
-            this.tbcRegistrar.Controls.Add(this.dtpFechaF);
             this.tbcRegistrar.Controls.Add(this.txtGenero);
             this.tbcRegistrar.Controls.Add(this.txtDuracion);
             this.tbcRegistrar.Controls.Add(this.txtNom);
             this.tbcRegistrar.Controls.Add(this.txtCod);
             this.tbcRegistrar.Controls.Add(this.btnRegistrarF);
             this.tbcRegistrar.Controls.Add(this.btnRegistar);
-            this.tbcRegistrar.Controls.Add(this.label7);
             this.tbcRegistrar.Controls.Add(this.label6);
             this.tbcRegistrar.Controls.Add(this.label5);
             this.tbcRegistrar.Controls.Add(this.label4);
@@ -101,13 +112,26 @@
             this.tbcRegistrar.UseVisualStyleBackColor = true;
             this.tbcRegistrar.Click += new System.EventHandler(this.tbcRegistrar_Click);
             // 
-            // dtpFechaF
+            // btnBuscarP
             // 
-            this.dtpFechaF.Location = new System.Drawing.Point(534, 164);
-            this.dtpFechaF.Name = "dtpFechaF";
-            this.dtpFechaF.Size = new System.Drawing.Size(200, 22);
-            this.dtpFechaF.TabIndex = 19;
-            this.dtpFechaF.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
+            this.btnBuscarP.Font = new System.Drawing.Font("MingLiU_HKSCS-ExtB", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBuscarP.Location = new System.Drawing.Point(188, 325);
+            this.btnBuscarP.Name = "btnBuscarP";
+            this.btnBuscarP.Size = new System.Drawing.Size(147, 48);
+            this.btnBuscarP.TabIndex = 21;
+            this.btnBuscarP.Text = "Buscar Pelicula";
+            this.btnBuscarP.UseVisualStyleBackColor = true;
+            // 
+            // chkFuncion
+            // 
+            this.chkFuncion.AutoSize = true;
+            this.chkFuncion.Font = new System.Drawing.Font("MingLiU_HKSCS-ExtB", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chkFuncion.Location = new System.Drawing.Point(380, 112);
+            this.chkFuncion.Name = "chkFuncion";
+            this.chkFuncion.Size = new System.Drawing.Size(219, 21);
+            this.chkFuncion.TabIndex = 20;
+            this.chkFuncion.Text = "Registrar una función";
+            this.chkFuncion.UseVisualStyleBackColor = true;
             // 
             // txtGenero
             // 
@@ -156,16 +180,6 @@
             this.btnRegistar.TabIndex = 10;
             this.btnRegistar.Text = "Registrar Pelicula";
             this.btnRegistar.UseVisualStyleBackColor = true;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("MingLiU_HKSCS-ExtB", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(377, 164);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(134, 17);
-            this.label7.TabIndex = 9;
-            this.label7.Text = "Fecha / Hora :";
             // 
             // label6
             // 
@@ -263,6 +277,13 @@
             // 
             // tbcVender
             // 
+            this.tbcVender.Controls.Add(this.btnVender);
+            this.tbcVender.Controls.Add(this.txtTotal);
+            this.tbcVender.Controls.Add(this.txtCant);
+            this.tbcVender.Controls.Add(this.txtNumFuncion);
+            this.tbcVender.Controls.Add(this.label8);
+            this.tbcVender.Controls.Add(this.label9);
+            this.tbcVender.Controls.Add(this.label10);
             this.tbcVender.Controls.Add(this.dgvBuscarFuncion);
             this.tbcVender.Controls.Add(this.txtCodA);
             this.tbcVender.Controls.Add(this.btnBuscar);
@@ -275,6 +296,16 @@
             this.tbcVender.Text = "Vender";
             this.tbcVender.UseVisualStyleBackColor = true;
             // 
+            // dgvBuscarFuncion
+            // 
+            this.dgvBuscarFuncion.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvBuscarFuncion.Location = new System.Drawing.Point(18, 78);
+            this.dgvBuscarFuncion.Name = "dgvBuscarFuncion";
+            this.dgvBuscarFuncion.RowHeadersWidth = 51;
+            this.dgvBuscarFuncion.RowTemplate.Height = 24;
+            this.dgvBuscarFuncion.Size = new System.Drawing.Size(708, 150);
+            this.dgvBuscarFuncion.TabIndex = 29;
+            // 
             // txtCodA
             // 
             this.txtCodA.Location = new System.Drawing.Point(126, 50);
@@ -285,7 +316,7 @@
             // btnBuscar
             // 
             this.btnBuscar.Font = new System.Drawing.Font("MingLiU_HKSCS-ExtB", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBuscar.Location = new System.Drawing.Point(79, 318);
+            this.btnBuscar.Location = new System.Drawing.Point(392, 17);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(147, 48);
             this.btnBuscar.TabIndex = 26;
@@ -313,36 +344,102 @@
             this.label16.TabIndex = 18;
             this.label16.Text = "Código :";
             // 
-            // chkFuncion
+            // txtSala
             // 
-            this.chkFuncion.AutoSize = true;
-            this.chkFuncion.Font = new System.Drawing.Font("MingLiU_HKSCS-ExtB", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkFuncion.Location = new System.Drawing.Point(380, 112);
-            this.chkFuncion.Name = "chkFuncion";
-            this.chkFuncion.Size = new System.Drawing.Size(219, 21);
-            this.chkFuncion.TabIndex = 20;
-            this.chkFuncion.Text = "Registrar una función";
-            this.chkFuncion.UseVisualStyleBackColor = true;
+            this.txtSala.Location = new System.Drawing.Point(478, 216);
+            this.txtSala.Name = "txtSala";
+            this.txtSala.Size = new System.Drawing.Size(176, 22);
+            this.txtSala.TabIndex = 28;
             // 
-            // btnBuscarP
+            // label11
             // 
-            this.btnBuscarP.Font = new System.Drawing.Font("MingLiU_HKSCS-ExtB", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBuscarP.Location = new System.Drawing.Point(188, 325);
-            this.btnBuscarP.Name = "btnBuscarP";
-            this.btnBuscarP.Size = new System.Drawing.Size(147, 48);
-            this.btnBuscarP.TabIndex = 21;
-            this.btnBuscarP.Text = "Buscar Pelicula";
-            this.btnBuscarP.UseVisualStyleBackColor = true;
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("MingLiU_HKSCS-ExtB", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(377, 216);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(53, 17);
+            this.label11.TabIndex = 27;
+            this.label11.Text = "Sala:";
             // 
-            // dgvBuscarFuncion
+            // dtmFechaHora
             // 
-            this.dgvBuscarFuncion.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvBuscarFuncion.Location = new System.Drawing.Point(18, 78);
-            this.dgvBuscarFuncion.Name = "dgvBuscarFuncion";
-            this.dgvBuscarFuncion.RowHeadersWidth = 51;
-            this.dgvBuscarFuncion.RowTemplate.Height = 24;
-            this.dgvBuscarFuncion.Size = new System.Drawing.Size(708, 150);
-            this.dgvBuscarFuncion.TabIndex = 29;
+            this.dtmFechaHora.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtmFechaHora.Location = new System.Drawing.Point(517, 164);
+            this.dtmFechaHora.Name = "dtmFechaHora";
+            this.dtmFechaHora.ShowUpDown = true;
+            this.dtmFechaHora.Size = new System.Drawing.Size(200, 22);
+            this.dtmFechaHora.TabIndex = 26;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("MingLiU_HKSCS-ExtB", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(377, 164);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(134, 17);
+            this.label7.TabIndex = 25;
+            this.label7.Text = "Fecha / Hora :";
+            // 
+            // btnVender
+            // 
+            this.btnVender.Font = new System.Drawing.Font("MingLiU_HKSCS-ExtB", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnVender.Location = new System.Drawing.Point(498, 296);
+            this.btnVender.Name = "btnVender";
+            this.btnVender.Size = new System.Drawing.Size(147, 32);
+            this.btnVender.TabIndex = 44;
+            this.btnVender.Text = "Vender";
+            this.btnVender.UseVisualStyleBackColor = true;
+            // 
+            // txtTotal
+            // 
+            this.txtTotal.Location = new System.Drawing.Point(214, 351);
+            this.txtTotal.Name = "txtTotal";
+            this.txtTotal.Size = new System.Drawing.Size(176, 22);
+            this.txtTotal.TabIndex = 43;
+            // 
+            // txtCant
+            // 
+            this.txtCant.Location = new System.Drawing.Point(214, 296);
+            this.txtCant.Name = "txtCant";
+            this.txtCant.Size = new System.Drawing.Size(176, 22);
+            this.txtCant.TabIndex = 42;
+            // 
+            // txtNumFuncion
+            // 
+            this.txtNumFuncion.Location = new System.Drawing.Point(214, 247);
+            this.txtNumFuncion.Name = "txtNumFuncion";
+            this.txtNumFuncion.Size = new System.Drawing.Size(176, 22);
+            this.txtNumFuncion.TabIndex = 41;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("MingLiU_HKSCS-ExtB", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(25, 296);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(188, 17);
+            this.label8.TabIndex = 40;
+            this.label8.Text = "Cantidad de boletas:";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("MingLiU_HKSCS-ExtB", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(25, 351);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(116, 17);
+            this.label9.TabIndex = 39;
+            this.label9.Text = "Valor Total:";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("MingLiU_HKSCS-ExtB", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(25, 247);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(170, 17);
+            this.label10.TabIndex = 38;
+            this.label10.Text = "Número de Función:";
             // 
             // Form1
             // 
@@ -374,7 +471,6 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button btnRegistrarF;
         private System.Windows.Forms.Button btnRegistar;
@@ -388,11 +484,21 @@
         private System.Windows.Forms.Button btnBuscar;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.DateTimePicker dtpFechaF;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.CheckBox chkFuncion;
         private System.Windows.Forms.Button btnBuscarP;
         private System.Windows.Forms.DataGridView dgvBuscarFuncion;
+        private System.Windows.Forms.TextBox txtSala;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.DateTimePicker dtmFechaHora;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Button btnVender;
+        private System.Windows.Forms.TextBox txtTotal;
+        private System.Windows.Forms.TextBox txtCant;
+        private System.Windows.Forms.TextBox txtNumFuncion;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label10;
     }
 }
 
