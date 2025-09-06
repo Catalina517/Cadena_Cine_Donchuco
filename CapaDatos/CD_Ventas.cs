@@ -29,5 +29,8 @@ namespace CapaDatos
                 cmd.ExecuteNonQuery();
             }
         }
+
+        
+        
     }
 }
