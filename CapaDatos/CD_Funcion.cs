@@ -11,6 +11,7 @@ namespace CapaDatos
 {
     public class CD_Funcion
     {
+        //Usar la cadena de conexion
         private static readonly string cadena =
           ConfigurationManager.ConnectionStrings["MiConexion"].ConnectionString;
 
@@ -19,6 +20,7 @@ namespace CapaDatos
         {
             using (SqlConnection cn = new SqlConnection(cadena))
             {
+                //Crear el comando para ejecutar los procedimientos almacenados
                 SqlCommand cmd = new SqlCommand("sp_RegistrarFuncion", cn);
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.Parameters.AddWithValue("@Codigo", codigo);

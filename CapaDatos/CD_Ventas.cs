@@ -28,9 +28,6 @@ namespace CapaDatos
                 cn.Open();
                 cmd.ExecuteNonQuery();
             }
-        }
-
-        
-        
+        } 
     }
 }

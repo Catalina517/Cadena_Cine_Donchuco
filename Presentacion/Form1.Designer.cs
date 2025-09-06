@@ -155,9 +155,9 @@
             // btnBuscarP
             // 
             this.btnBuscarP.Font = new System.Drawing.Font("MingLiU_HKSCS-ExtB", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBuscarP.Location = new System.Drawing.Point(188, 325);
+            this.btnBuscarP.Location = new System.Drawing.Point(188, 304);
             this.btnBuscarP.Name = "btnBuscarP";
-            this.btnBuscarP.Size = new System.Drawing.Size(147, 48);
+            this.btnBuscarP.Size = new System.Drawing.Size(147, 69);
             this.btnBuscarP.TabIndex = 21;
             this.btnBuscarP.Text = "Buscar Pelicula";
             this.btnBuscarP.UseVisualStyleBackColor = true;
@@ -210,9 +210,9 @@
             // btnRegistrarF
             // 
             this.btnRegistrarF.Font = new System.Drawing.Font("MingLiU_HKSCS-ExtB", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRegistrarF.Location = new System.Drawing.Point(435, 325);
+            this.btnRegistrarF.Location = new System.Drawing.Point(435, 304);
             this.btnRegistrarF.Name = "btnRegistrarF";
-            this.btnRegistrarF.Size = new System.Drawing.Size(147, 48);
+            this.btnRegistrarF.Size = new System.Drawing.Size(147, 69);
             this.btnRegistrarF.TabIndex = 11;
             this.btnRegistrarF.Text = "Registrar Función";
             this.btnRegistrarF.UseVisualStyleBackColor = true;
@@ -221,9 +221,9 @@
             // btnRegistar
             // 
             this.btnRegistar.Font = new System.Drawing.Font("MingLiU_HKSCS-ExtB", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRegistar.Location = new System.Drawing.Point(21, 325);
+            this.btnRegistar.Location = new System.Drawing.Point(21, 304);
             this.btnRegistar.Name = "btnRegistar";
-            this.btnRegistar.Size = new System.Drawing.Size(147, 48);
+            this.btnRegistar.Size = new System.Drawing.Size(147, 69);
             this.btnRegistar.TabIndex = 10;
             this.btnRegistar.Text = "Registrar Pelicula";
             this.btnRegistar.UseVisualStyleBackColor = true;
@@ -349,10 +349,10 @@
             // 
             // btnVender
             // 
-            this.btnVender.Font = new System.Drawing.Font("MingLiU_HKSCS-ExtB", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnVender.Location = new System.Drawing.Point(498, 281);
+            this.btnVender.Font = new System.Drawing.Font("MingLiU_HKSCS-ExtB", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnVender.Location = new System.Drawing.Point(498, 269);
             this.btnVender.Name = "btnVender";
-            this.btnVender.Size = new System.Drawing.Size(147, 32);
+            this.btnVender.Size = new System.Drawing.Size(147, 44);
             this.btnVender.TabIndex = 44;
             this.btnVender.Text = "Vender";
             this.btnVender.UseVisualStyleBackColor = true;
@@ -432,10 +432,10 @@
             // 
             // btnBuscar
             // 
-            this.btnBuscar.Font = new System.Drawing.Font("MingLiU_HKSCS-ExtB", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBuscar.Font = new System.Drawing.Font("MingLiU_HKSCS-ExtB", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBuscar.Location = new System.Drawing.Point(392, 17);
             this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(147, 48);
+            this.btnBuscar.Size = new System.Drawing.Size(147, 55);
             this.btnBuscar.TabIndex = 26;
             this.btnBuscar.Text = "Buscar Función";
             this.btnBuscar.UseVisualStyleBackColor = true;

@@ -66,6 +66,8 @@ namespace Presentacion
             {
                 MessageBox.Show("Error: " + ex.Message);
             }
+
+            
         }
 
         private void chkFuncion_CheckedChanged(object sender, EventArgs e)
@@ -118,7 +120,6 @@ namespace Presentacion
 
             decimal total = venta.RegistrarVenta(idFuncion, cantidadBoletas, valorUnitario);
 
-            // Mostrar en el label o textbox
             lblTotal.Text = $"{total}";
 
             MessageBox.Show("Venta registrada con éxito");

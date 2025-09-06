@@ -13,9 +13,6 @@ namespace CapaNegocio
     {
         private CD_Funcion objCd= new CD_Funcion();
 
-
-
-
         public void RegistarF(int codigo, DateTime fechaHora, string sala)
         {
             if (codigo == 0 || codigo < 0)
@@ -29,7 +26,6 @@ namespace CapaNegocio
                     throw new ArgumentException("La sala no puede estar vacía.");
                 } 
             }
-            
 
             objCd.RegistrarFuncion(codigo, fechaHora, sala);
         }
