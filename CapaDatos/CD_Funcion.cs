@@ -45,25 +45,18 @@ namespace CapaDatos
         }
 
         // Buscar función
-        public DataRow BuscarFuncion(int idFuncion)
+        public DataTable BuscarFuncion(int codigo)
         {
             DataTable dt = new DataTable();
             using (SqlConnection cn = new SqlConnection(cadena))
             {
                 SqlCommand cmd = new SqlCommand("sp_BuscarFuncion", cn);
                 cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.AddWithValue("@IdFuncion", idFuncion);
+                cmd.Parameters.AddWithValue("@Codigo", codigo);
                 SqlDataAdapter da = new SqlDataAdapter(cmd);
                 da.Fill(dt);
             }
-            if (dt.Rows.Count > 0)
-            {
-                return dt.Rows[0];
-            }
-            else
-            {
-                return null;
-            }
+            return dt;
         }
     }
 }

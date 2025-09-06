@@ -16,9 +16,22 @@ namespace CapaNegocio
 
 
 
-        public void RegistarF(int codigo, DateTime fechaHora, string sala) 
+        public void RegistarF(int codigo, DateTime fechaHora, string sala)
         {
-          objCd.RegistrarFuncion(codigo, fechaHora, sala);
+            if (codigo == 0 || codigo < 0)
+            {
+                throw new ArgumentException("El código no puede ser cero o negativo.");
+            }
+            else
+            {
+                if (string.IsNullOrWhiteSpace(sala))
+                {
+                    throw new ArgumentException("La sala no puede estar vacía.");
+                } 
+            }
+            
+
+            objCd.RegistrarFuncion(codigo, fechaHora, sala);
         }
 
 
@@ -28,7 +41,7 @@ namespace CapaNegocio
             
         }
 
-        public DataRow BuscarF (int codigo) 
+        public DataTable BuscarF (int codigo) 
         {
           return objCd.BuscarFuncion(codigo);
         }

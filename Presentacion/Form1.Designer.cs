@@ -53,7 +53,7 @@
             this.dgvListar = new System.Windows.Forms.DataGridView();
             this.tbcVender = new System.Windows.Forms.TabPage();
             this.btnVender = new System.Windows.Forms.Button();
-            this.txtTotal = new System.Windows.Forms.TextBox();
+            this.txtUnidad = new System.Windows.Forms.TextBox();
             this.txtCant = new System.Windows.Forms.TextBox();
             this.txtNumFuncion = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
@@ -64,6 +64,8 @@
             this.btnBuscar = new System.Windows.Forms.Button();
             this.label12 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.lblTotal = new System.Windows.Forms.Label();
             this.tbcPeliculas.SuspendLayout();
             this.tbcRegistrar.SuspendLayout();
             this.tbcListar.SuspendLayout();
@@ -114,16 +116,17 @@
             // 
             // txtSala
             // 
-            this.txtSala.Location = new System.Drawing.Point(478, 216);
+            this.txtSala.Font = new System.Drawing.Font("MingLiU_HKSCS-ExtB", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSala.Location = new System.Drawing.Point(455, 185);
             this.txtSala.Name = "txtSala";
-            this.txtSala.Size = new System.Drawing.Size(176, 22);
+            this.txtSala.Size = new System.Drawing.Size(176, 28);
             this.txtSala.TabIndex = 28;
             // 
             // label11
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("MingLiU_HKSCS-ExtB", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(377, 216);
+            this.label11.Location = new System.Drawing.Point(379, 191);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(53, 17);
             this.label11.TabIndex = 27;
@@ -131,22 +134,23 @@
             // 
             // dtmFechaHora
             // 
+            this.dtmFechaHora.Font = new System.Drawing.Font("MingLiU_HKSCS-ExtB", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtmFechaHora.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtmFechaHora.Location = new System.Drawing.Point(517, 164);
+            this.dtmFechaHora.Location = new System.Drawing.Point(519, 131);
             this.dtmFechaHora.Name = "dtmFechaHora";
             this.dtmFechaHora.ShowUpDown = true;
-            this.dtmFechaHora.Size = new System.Drawing.Size(200, 22);
+            this.dtmFechaHora.Size = new System.Drawing.Size(200, 28);
             this.dtmFechaHora.TabIndex = 26;
             // 
             // label7
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("MingLiU_HKSCS-ExtB", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(377, 164);
+            this.label7.Location = new System.Drawing.Point(379, 139);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(134, 17);
+            this.label7.Size = new System.Drawing.Size(125, 17);
             this.label7.TabIndex = 25;
-            this.label7.Text = "Fecha / Hora :";
+            this.label7.Text = "Fecha / Hora:";
             // 
             // btnBuscarP
             // 
@@ -157,44 +161,50 @@
             this.btnBuscarP.TabIndex = 21;
             this.btnBuscarP.Text = "Buscar Pelicula";
             this.btnBuscarP.UseVisualStyleBackColor = true;
+            this.btnBuscarP.Click += new System.EventHandler(this.btnBuscarP_Click);
             // 
             // chkFuncion
             // 
             this.chkFuncion.AutoSize = true;
             this.chkFuncion.Font = new System.Drawing.Font("MingLiU_HKSCS-ExtB", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkFuncion.Location = new System.Drawing.Point(380, 112);
+            this.chkFuncion.Location = new System.Drawing.Point(382, 87);
             this.chkFuncion.Name = "chkFuncion";
             this.chkFuncion.Size = new System.Drawing.Size(219, 21);
             this.chkFuncion.TabIndex = 20;
             this.chkFuncion.Text = "Registrar una función";
             this.chkFuncion.UseVisualStyleBackColor = true;
+            this.chkFuncion.CheckedChanged += new System.EventHandler(this.chkFuncion_CheckedChanged);
             // 
             // txtGenero
             // 
-            this.txtGenero.Location = new System.Drawing.Point(119, 272);
+            this.txtGenero.Font = new System.Drawing.Font("MingLiU_HKSCS-ExtB", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtGenero.Location = new System.Drawing.Point(119, 247);
             this.txtGenero.Name = "txtGenero";
-            this.txtGenero.Size = new System.Drawing.Size(176, 22);
+            this.txtGenero.Size = new System.Drawing.Size(176, 28);
             this.txtGenero.TabIndex = 15;
             // 
             // txtDuracion
             // 
-            this.txtDuracion.Location = new System.Drawing.Point(119, 221);
+            this.txtDuracion.Font = new System.Drawing.Font("MingLiU_HKSCS-ExtB", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDuracion.Location = new System.Drawing.Point(119, 196);
             this.txtDuracion.Name = "txtDuracion";
-            this.txtDuracion.Size = new System.Drawing.Size(176, 22);
+            this.txtDuracion.Size = new System.Drawing.Size(176, 28);
             this.txtDuracion.TabIndex = 14;
             // 
             // txtNom
             // 
-            this.txtNom.Location = new System.Drawing.Point(119, 159);
+            this.txtNom.Font = new System.Drawing.Font("MingLiU_HKSCS-ExtB", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNom.Location = new System.Drawing.Point(119, 134);
             this.txtNom.Name = "txtNom";
-            this.txtNom.Size = new System.Drawing.Size(176, 22);
+            this.txtNom.Size = new System.Drawing.Size(176, 28);
             this.txtNom.TabIndex = 13;
             // 
             // txtCod
             // 
-            this.txtCod.Location = new System.Drawing.Point(119, 110);
+            this.txtCod.Font = new System.Drawing.Font("MingLiU_HKSCS-ExtB", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCod.Location = new System.Drawing.Point(119, 85);
             this.txtCod.Name = "txtCod";
-            this.txtCod.Size = new System.Drawing.Size(176, 22);
+            this.txtCod.Size = new System.Drawing.Size(176, 28);
             this.txtCod.TabIndex = 12;
             // 
             // btnRegistrarF
@@ -206,6 +216,7 @@
             this.btnRegistrarF.TabIndex = 11;
             this.btnRegistrarF.Text = "Registrar Función";
             this.btnRegistrarF.UseVisualStyleBackColor = true;
+            this.btnRegistrarF.Click += new System.EventHandler(this.btnRegistrarF_Click);
             // 
             // btnRegistar
             // 
@@ -216,6 +227,7 @@
             this.btnRegistar.TabIndex = 10;
             this.btnRegistar.Text = "Registrar Pelicula";
             this.btnRegistar.UseVisualStyleBackColor = true;
+            this.btnRegistar.Click += new System.EventHandler(this.btnRegistar_Click);
             // 
             // label6
             // 
@@ -243,41 +255,41 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("MingLiU_HKSCS-ExtB", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(18, 164);
+            this.label4.Location = new System.Drawing.Point(18, 139);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(80, 17);
+            this.label4.Size = new System.Drawing.Size(71, 17);
             this.label4.TabIndex = 3;
-            this.label4.Text = "Nombre :";
+            this.label4.Text = "Nombre:";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("MingLiU_HKSCS-ExtB", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(18, 221);
+            this.label3.Location = new System.Drawing.Point(18, 199);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(98, 17);
+            this.label3.Size = new System.Drawing.Size(89, 17);
             this.label3.TabIndex = 2;
-            this.label3.Text = "Duración :";
+            this.label3.Text = "Duración:";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("MingLiU_HKSCS-ExtB", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(18, 277);
+            this.label2.Location = new System.Drawing.Point(18, 252);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(80, 17);
+            this.label2.Size = new System.Drawing.Size(71, 17);
             this.label2.TabIndex = 1;
-            this.label2.Text = "Género :";
+            this.label2.Text = "Género:";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("MingLiU_HKSCS-ExtB", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(18, 115);
+            this.label1.Location = new System.Drawing.Point(18, 88);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(80, 17);
+            this.label1.Size = new System.Drawing.Size(71, 17);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Código :";
+            this.label1.Text = "Código:";
             // 
             // tbcListar
             // 
@@ -300,6 +312,7 @@
             this.btnListar.TabIndex = 1;
             this.btnListar.Text = "Listar";
             this.btnListar.UseVisualStyleBackColor = true;
+            this.btnListar.Click += new System.EventHandler(this.btnListar_Click);
             // 
             // dgvListar
             // 
@@ -313,8 +326,10 @@
             // 
             // tbcVender
             // 
+            this.tbcVender.Controls.Add(this.lblTotal);
+            this.tbcVender.Controls.Add(this.label13);
             this.tbcVender.Controls.Add(this.btnVender);
-            this.tbcVender.Controls.Add(this.txtTotal);
+            this.tbcVender.Controls.Add(this.txtUnidad);
             this.tbcVender.Controls.Add(this.txtCant);
             this.tbcVender.Controls.Add(this.txtNumFuncion);
             this.tbcVender.Controls.Add(this.label8);
@@ -334,33 +349,37 @@
             // 
             // btnVender
             // 
-            this.btnVender.Font = new System.Drawing.Font("MingLiU_HKSCS-ExtB", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnVender.Location = new System.Drawing.Point(498, 296);
+            this.btnVender.Font = new System.Drawing.Font("MingLiU_HKSCS-ExtB", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnVender.Location = new System.Drawing.Point(498, 281);
             this.btnVender.Name = "btnVender";
             this.btnVender.Size = new System.Drawing.Size(147, 32);
             this.btnVender.TabIndex = 44;
             this.btnVender.Text = "Vender";
             this.btnVender.UseVisualStyleBackColor = true;
+            this.btnVender.Click += new System.EventHandler(this.btnVender_Click);
             // 
-            // txtTotal
+            // txtUnidad
             // 
-            this.txtTotal.Location = new System.Drawing.Point(214, 351);
-            this.txtTotal.Name = "txtTotal";
-            this.txtTotal.Size = new System.Drawing.Size(176, 22);
-            this.txtTotal.TabIndex = 43;
+            this.txtUnidad.Font = new System.Drawing.Font("MingLiU_HKSCS-ExtB", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtUnidad.Location = new System.Drawing.Point(214, 351);
+            this.txtUnidad.Name = "txtUnidad";
+            this.txtUnidad.Size = new System.Drawing.Size(176, 28);
+            this.txtUnidad.TabIndex = 43;
             // 
             // txtCant
             // 
+            this.txtCant.Font = new System.Drawing.Font("MingLiU_HKSCS-ExtB", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCant.Location = new System.Drawing.Point(214, 296);
             this.txtCant.Name = "txtCant";
-            this.txtCant.Size = new System.Drawing.Size(176, 22);
+            this.txtCant.Size = new System.Drawing.Size(176, 28);
             this.txtCant.TabIndex = 42;
             // 
             // txtNumFuncion
             // 
+            this.txtNumFuncion.Font = new System.Drawing.Font("MingLiU_HKSCS-ExtB", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNumFuncion.Location = new System.Drawing.Point(214, 247);
             this.txtNumFuncion.Name = "txtNumFuncion";
-            this.txtNumFuncion.Size = new System.Drawing.Size(176, 22);
+            this.txtNumFuncion.Size = new System.Drawing.Size(176, 28);
             this.txtNumFuncion.TabIndex = 41;
             // 
             // label8
@@ -379,9 +398,9 @@
             this.label9.Font = new System.Drawing.Font("MingLiU_HKSCS-ExtB", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.Location = new System.Drawing.Point(25, 351);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(116, 17);
+            this.label9.Size = new System.Drawing.Size(143, 17);
             this.label9.TabIndex = 39;
-            this.label9.Text = "Valor Total:";
+            this.label9.Text = "Valor Unitario:";
             // 
             // label10
             // 
@@ -405,20 +424,22 @@
             // 
             // txtCodA
             // 
-            this.txtCodA.Location = new System.Drawing.Point(126, 50);
+            this.txtCodA.Font = new System.Drawing.Font("MingLiU_HKSCS-ExtB", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCodA.Location = new System.Drawing.Point(111, 44);
             this.txtCodA.Name = "txtCodA";
-            this.txtCodA.Size = new System.Drawing.Size(176, 22);
+            this.txtCodA.Size = new System.Drawing.Size(176, 28);
             this.txtCodA.TabIndex = 28;
             // 
             // btnBuscar
             // 
-            this.btnBuscar.Font = new System.Drawing.Font("MingLiU_HKSCS-ExtB", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBuscar.Font = new System.Drawing.Font("MingLiU_HKSCS-ExtB", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBuscar.Location = new System.Drawing.Point(392, 17);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(147, 48);
             this.btnBuscar.TabIndex = 26;
             this.btnBuscar.Text = "Buscar Función";
             this.btnBuscar.UseVisualStyleBackColor = true;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
             // label12
             // 
@@ -435,11 +456,31 @@
             // 
             this.label16.AutoSize = true;
             this.label16.Font = new System.Drawing.Font("MingLiU_HKSCS-ExtB", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.Location = new System.Drawing.Point(25, 55);
+            this.label16.Location = new System.Drawing.Point(25, 47);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(80, 17);
+            this.label16.Size = new System.Drawing.Size(71, 17);
             this.label16.TabIndex = 18;
-            this.label16.Text = "Código :";
+            this.label16.Text = "Código:";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("MingLiU_HKSCS-ExtB", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Location = new System.Drawing.Point(434, 356);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(116, 17);
+            this.label13.TabIndex = 45;
+            this.label13.Text = "Valor Total:";
+            // 
+            // lblTotal
+            // 
+            this.lblTotal.AutoSize = true;
+            this.lblTotal.Font = new System.Drawing.Font("MingLiU_HKSCS-ExtB", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTotal.Location = new System.Drawing.Point(556, 357);
+            this.lblTotal.Name = "lblTotal";
+            this.lblTotal.Size = new System.Drawing.Size(17, 17);
+            this.lblTotal.TabIndex = 46;
+            this.lblTotal.Text = "-";
             // 
             // Form1
             // 
@@ -493,12 +534,14 @@
         private System.Windows.Forms.DateTimePicker dtmFechaHora;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Button btnVender;
-        private System.Windows.Forms.TextBox txtTotal;
+        private System.Windows.Forms.TextBox txtUnidad;
         private System.Windows.Forms.TextBox txtCant;
         private System.Windows.Forms.TextBox txtNumFuncion;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label lblTotal;
     }
 }
 

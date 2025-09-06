@@ -13,13 +13,21 @@ namespace CapaNegocio
     {
         private CD_Ventas objetoCD = new CD_Ventas();
 
-        //precio de boletas
-        private const decimal PrecioBoleta = 12000m;
+        
         // Método para registrar venta
-        public void RegistrarVenta(int idFuncion, int cantidadBoletas)
+        public decimal RegistrarVenta(int idFuncion, int cantidadBoletas, decimal valorUnitario)
         {
-            decimal valorTotal = cantidadBoletas * PrecioBoleta;
+            if (cantidadBoletas <= 0)
+                throw new Exception("La cantidad de boletas debe ser mayor a cero.");
+
+            if (valorUnitario <= 0)
+                throw new Exception("El precio unitario debe ser mayor a cero.");
+
+            decimal valorTotal = cantidadBoletas * valorUnitario;
+
             objetoCD.RegistrarVenta(idFuncion, cantidadBoletas, valorTotal);
+
+            return valorTotal;
         }
     }
 }
